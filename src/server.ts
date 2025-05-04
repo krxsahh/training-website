@@ -30,8 +30,8 @@ const database = container.get<IDatabase>(TYPES.IDatabase);
 const appConfig = container.get<IConfig>('Config');
 
 // Підключаємо обробники HTTP-запитів до REST API
-import rabbitRoutes from './routes/rabbits';
-app.use('/api/rabbits', rabbitRoutes);
+import buffaloRoutes from './routes/buffalo';
+app.use('/api/buffalo', buffaloRoutes);
 
 // Отримуємо порт з конфігурації
 const PORT = config.PORT;
