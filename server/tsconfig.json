@@ -1,0 +1,66 @@
+{
+  "compilerOptions": {
+    // Цільова версія JavaScript для компіляції
+    "target": "es2020",
+    // Система модулів, яка буде використовуватися
+    "module": "commonjs",
+    // Бібліотеки, які будуть доступні під час компіляції
+    "lib": ["es2020", "dom"],
+    // Генерувати файли декларацій (.d.ts)
+    "declaration": true,
+    // Генерувати source map файли для налагодження
+    "sourceMap": true,
+    // Каталог для компільованих файлів
+    "outDir": "./dist",
+    // Кореневий каталог з вихідними файлами
+    "rootDir": "./",
+    // Увімкнути всі строгі перевірки типів
+    "strict": true,
+    // Стратегія вирішення модулів
+    "moduleResolution": "node",
+    // Базовий шлях для вирішення модулів
+    "baseUrl": "./",
+    // Налаштування аліасів шляхів для імпортів
+    "paths": {
+      "@/*": ["src/*"]
+    },
+    // Покращена сумісність з модулями CommonJS
+    "esModuleInterop": true,
+    // Підтримка декораторів
+    "experimentalDecorators": true,
+    // Генерувати метадані для декораторів
+    "emitDecoratorMetadata": true,
+    // Дозволити імпорт JSON файлів як модулів
+    "resolveJsonModule": true,
+    // Пропускати перевірку типів для файлів з бібліотек
+    "skipLibCheck": true,
+    // Забезпечити однакове написання імен файлів
+    "forceConsistentCasingInFileNames": true,
+    // Не дозволяти неявний тип any
+    "noImplicitAny": true,
+    // Строга перевірка значень null та undefined
+    "strictNullChecks": true,
+    // Строгі перевірки типів функцій
+    "strictFunctionTypes": true,
+    // Строгі перевірки для методів call і apply
+    "strictBindCallApply": true,
+    // Строгі перевірки ініціалізації властивостей
+    "strictPropertyInitialization": true,
+    // Не дозволяти неявний this
+    "noImplicitThis": true,
+    // Використовувати строгий режим JavaScript
+    "alwaysStrict": true,
+    // Помилка при невикористаних локальних змінних
+    "noUnusedLocals": true,
+    // Помилка при невикористаних параметрах
+    "noUnusedParameters": true,
+    // Перевіряти всі шляхи виконання на повернення значення
+    "noImplicitReturns": true,
+    // Помилка при відсутності break в case блоках
+    "noFallthroughCasesInSwitch": true
+  },
+  // Які файли включати в компіляцію
+  "include": ["src/**/*.ts", "tests/**/*.ts"],
+  // Які файли виключати з компіляції
+  "exclude": ["node_modules", "dist"]
+}

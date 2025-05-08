@@ -46,6 +46,9 @@ function Header() {
           <Link to="/photo" className={`nav-link text-white ${location.pathname === '/photo' ? 'active' : ''}`}>
             Фотографії бізонів
           </Link>
+          <Link to="/rehabilitation" className={`nav-link text-white ${location.pathname === '/rehabilitation' ? 'active' : ''}`}>
+            Реабілітація
+          </Link>
         </nav>
 
         <div className="search-container">

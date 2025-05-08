@@ -7,6 +7,7 @@ import Nutrition from './pages/Nutrition';
 import Population from './pages/Population';
 import Photo from './pages/Photo';
 import Search from './pages/Search';
+import Rehabilitation from './pages/Rehabilitation';
 import { SearchProvider } from './context/SearchContext';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles/style.css';
@@ -25,6 +26,7 @@ function App() {
               <Route path="/population" element={<Population />} />
               <Route path="/photo" element={<Photo />} />
               <Route path="/search" element={<Search />} />
+              <Route path="/rehabilitation" element={<Rehabilitation />} />
             </Routes>
           </div>
           <Footer />
