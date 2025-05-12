@@ -181,7 +181,7 @@ export const swaggerSpec = {
             // Схема об'єкта Бізона
             Buffalo: {
                 type: 'object',
-                required: ['name', 'age', 'height', 'weight', 'gender'],
+                required: ['name', 'age', 'height', 'weight', 'gender', 'migrationDistance'],
                 properties: {
                     name: {
                         type: 'string',
@@ -207,6 +207,16 @@ export const swaggerSpec = {
                     description: {
                         type: 'string',
                         description: "Опис бізона (необов'язкове поле)",
+                    },
+                    dateAdded: {
+                        type: 'string',
+                        format: 'date-time',
+                        description: 'Дата додавання запису до бази даних',
+                    },
+                    migrationDistance: {
+                        type: 'number',
+                        description: 'Відстань міграції бізона в кілометрах',
+                        default: 0,
                     },
                 },
             },

@@ -9,6 +9,7 @@ interface IBuffalo {
     gender: 'male' | 'female'; // Стать бізона: 'male' - самець, 'female' - самка
     description?: string; // Опис бізона (необов'язкове поле)
     dateAdded: Date; // Дата додавання запису до бази даних
+    migrationDistance: number;
 }
 
 // Схема MongoDB для моделі "Бізон"
@@ -38,6 +39,11 @@ const buffaloSchema = new Schema<IBuffalo>({
     dateAdded: {
         type: Date,
         default: Date.now, // Значення за замовчуванням - поточна дата і час
+    },
+    migrationDistance: {
+        type: Number,
+        default: 0,
+        required: true,
     },
 });
 
