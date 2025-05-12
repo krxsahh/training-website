@@ -69,7 +69,6 @@ describe('API вебдодатку сайту про бізонів', () => {
                 weight: 3.5,
                 gender: 'male' as const,
                 description: 'Бізон',
-                migrationDistance: 5,
             };
 
             // Виконуємо POST-запит для створення запису про бізона
@@ -88,7 +87,6 @@ describe('API вебдодатку сайту про бізонів', () => {
                     expect(res.body).to.have.property('weight', buffalo.weight);
                     expect(res.body).to.have.property('gender', buffalo.gender);
                     expect(res.body).to.have.property('description', buffalo.description);
-                    // expect(res.body).to.have.property('migrationDistance', buffalo.migrationDistance);
                     expect(res.body).to.have.property('dateAdded');
                     expect(new Date(res.body.dateAdded)).to.be.instanceOf(Date);
                     done();
