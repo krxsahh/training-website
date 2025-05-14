@@ -43,6 +43,7 @@ const buffaloSchema = new Schema<IBuffalo>({
     migrationDistance: {
         type: Number,
         default: 0,
+        required: true,
     },
 });
 
