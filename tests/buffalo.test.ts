@@ -69,6 +69,7 @@ describe('API вебдодатку сайту про бізонів', () => {
                 weight: 3.5,
                 gender: 'male' as const,
                 description: 'Бізон',
+                migrationDistance: 4,
             };
 
             // Виконуємо POST-запит для створення запису про бізона
@@ -89,6 +90,7 @@ describe('API вебдодатку сайту про бізонів', () => {
                     expect(res.body).to.have.property('description', buffalo.description);
                     expect(res.body).to.have.property('dateAdded');
                     expect(new Date(res.body.dateAdded)).to.be.instanceOf(Date);
+                    expect(res.body).to.have.property('migrationDistance', buffalo.migrationDistance);
                     done();
                 });
         });
@@ -105,6 +107,7 @@ describe('API вебдодатку сайту про бізонів', () => {
                 weight: 5,
                 gender: 'male',
                 description: 'Бізон',
+                migrationDistance: 4,
             });
             await testBuffalo.save();
 
@@ -118,6 +121,7 @@ describe('API вебдодатку сайту про бізонів', () => {
             expect(res.body[0]).to.have.property('description', 'Бізон');
             expect(res.body[0]).to.have.property('dateAdded');
             expect(new Date(res.body[0].dateAdded)).to.be.instanceOf(Date);
+            expect(res.body[0]).to.have.property('migrationDistance', 4);
         });
     });
 
@@ -132,6 +136,7 @@ describe('API вебдодатку сайту про бізонів', () => {
                 weight: 2,
                 gender: 'male',
                 description: 'Коричневий бізон',
+                migrationDistance: 4,
             });
             const savedBuffalo = await testBuffalo.save();
 
@@ -144,6 +149,7 @@ describe('API вебдодатку сайту про бізонів', () => {
             expect(res.body).to.have.property('weight', 2);
             expect(res.body).to.have.property('gender', 'male');
             expect(res.body).to.have.property('description', 'Коричневий бізон');
+            expect(res.body).to.have.property('migrationDistance', 4);
         });
 
         it('має повернути 404 для неіснуючого бізона', async () => {
@@ -164,6 +170,8 @@ describe('API вебдодатку сайту про бізонів', () => {
                 weight: 1.8,
                 gender: 'male',
                 description: 'Початковий опис',
+                migrationDistance: 4,
+
             });
             const savedBuffalo = await testBuffalo.save();
 
@@ -175,6 +183,7 @@ describe('API вебдодатку сайту про бізонів', () => {
                 weight: 2.5,
                 gender: 'female',
                 description: 'Оновлений опис',
+                migrationDistance: 6,
             };
 
             // Виконуємо PUT-запит для повного оновлення запису про бізона
@@ -193,6 +202,7 @@ describe('API вебдодатку сайту про бізонів', () => {
             expect(res.body).to.have.property('description', 'Оновлений опис');
             expect(res.body).to.have.property('dateAdded');
             expect(new Date(res.body.dateAdded)).to.be.instanceOf(Date);
+            expect(res.body).to.have.property('migrationDistance', 6);
         });
 
         it("має завершитися невдачею при відсутності обов'язкових полів", async () => {
@@ -204,6 +214,7 @@ describe('API вебдодатку сайту про бізонів', () => {
                 weight: 1.8,
                 gender: 'male',
                 description: 'Початковий опис',
+                migrationDistance: 4,
             });
             const savedBuffalo = await testBuffalo.save();
 
@@ -230,6 +241,7 @@ describe('API вебдодатку сайту про бізонів', () => {
             expect(unchangedBuffalo).to.have.property('name', 'Оригінальний');
             expect(unchangedBuffalo).to.have.property('height', 25);
             expect(unchangedBuffalo).to.have.property('weight', 1.8);
+            expect(unchangedBuffalo).to.have.property('migrationDistance', 4);
         });
     });
 
@@ -244,6 +256,7 @@ describe('API вебдодатку сайту про бізонів', () => {
                 weight: 1.8,
                 gender: 'male',
                 description: 'Початковий опис',
+                migrationDistance: 4,
             });
             const savedBuffalo = await testBuffalo.save();
 
@@ -252,6 +265,7 @@ describe('API вебдодатку сайту про бізонів', () => {
                 name: 'Частково оновлений',
                 age: 3,
                 description: 'Оновлений опис',
+                migrationDistance: 7,
             };
 
             // Виконуємо PATCH-запит
@@ -270,6 +284,7 @@ describe('API вебдодатку сайту про бізонів', () => {
             expect(res.body).to.have.property('description', 'Оновлений опис');
             expect(res.body).to.have.property('dateAdded');
             expect(new Date(res.body.dateAdded)).to.be.instanceOf(Date);
+            expect(res.body).to.have.property('migrationDistance', 7);
         });
 
         it('демонструє різницю між PATCH і PUT з частковими оновленнями', async () => {
@@ -281,6 +296,7 @@ describe('API вебдодатку сайту про бізонів', () => {
                 weight: 1.8,
                 gender: 'male',
                 description: 'Початковий опис',
+                migrationDistance: 4,
             });
             const savedBuffalo = await testBuffalo.save();
 
@@ -308,6 +324,7 @@ describe('API вебдодатку сайту про бізонів', () => {
             expect(res.body).to.have.property('weight', 1.8);
             expect(res.body).to.have.property('gender', 'female');
             expect(res.body).to.have.property('description', 'Оновлений опис');
+            expect(res.body).to.have.property('migrationDistance', 4);
         });
     });
 
@@ -348,6 +365,7 @@ describe('API вебдодатку сайту про бізонів', () => {
                 weight: 2.1,
                 gender: 'female',
                 description: 'Чорний бізон',
+                migrationDistance: 4,
             });
             const savedBuffalo = await testBuffalo.save();
 
