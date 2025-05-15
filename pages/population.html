@@ -6,137 +6,139 @@
   <meta name="description" content="Ареал бізонів">
   <title>Ареал бізонів</title>
   <link href="../css/style.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
 </head>
-<body class="custom-green-theme">
-  <header class="text-center bg-success text-white py-3">
-    <h1>Ареал бізонів</h1>
-    <nav class="nav justify-content-center">
-      <a href="../index.html" class="nav-link text-white">Головна</a>
-      <a href="morphology.html" class="nav-link text-white">Зовнішній вигляд</a>
-      <a href="nutrition.html" class="nav-link text-white">Харчування</a>
-      <a href="photo.html" class="nav-link text-white">Фотогалерея</a>
+<body class="bg-green-100">
+  <header class="text-center bg-green-600 text-white py-6">
+    <h1 class="text-4xl font-bold">Ареал бізонів</h1>
+    <nav class="flex justify-center space-x-4 mt-4">
+      <a href="../index.html" class="text-white hover:text-green-200">Головна</a>
+      <a href="morphology.html" class="text-white hover:text-green-200">Зовнішній вигляд</a>
+      <a href="nutrition.html" class="text-white hover:text-green-200">Харчування</a>
+      <a href="photo.html" class="text-white hover:text-green-200">Фотогалерея</a>
     </nav>
   </header>
 
-  <main class="container py-4">
-    <div class="row">
-      <div class="col-md-3">
-        <aside class="sticky-top pt-3">
-          <nav class="nav flex-column">
-            <h4>Зміст</h4>
-            <a href="#continentsList" class="nav-link" data-bs-toggle="collapse">Континенти</a>
-            <a href="#subcontinentsList" class="nav-link" data-bs-toggle="collapse">Субконтиненти</a>
-            <a href="#countriesList" class="nav-link" data-bs-toggle="collapse">Країни</a>
-            <a href="#introducedList" class="nav-link" data-bs-toggle="collapse">Інтродуковані в</a>
-            <a href="#biogeographicList" class="nav-link" data-bs-toggle="collapse">Біогеографічні зони</a>
-            <a href="#biomesList" class="nav-link" data-bs-toggle="collapse">WWF Біоми</a>
-          </nav>
-        </aside>
-      </div>
-      <div class="col-md-9">
-        <h2 class="h2 text-success">Ареал</h2>
+  <main class="max-w-4xl mx-auto py-8 px-4">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+      <aside class="md:col-span-1 sticky top-4">
+        <nav class="flex flex-col space-y-2">
+          <h4 class="text-lg font-semibold text-green-700">Зміст</h4>
+          <a href="#continents" class="text-gray-800 hover:text-green-600" onclick="toggleCollapse('continentsList')">Континенти</a>
+          <a href="#subcontinents" class="text-gray-800 hover:text-green-600" onclick="toggleCollapse('subcontinentsList')">Субконтиненти</a>
+          <a href="#countries" class="text-gray-800 hover:text-green-600" onclick="toggleCollapse('countriesList')">Країни</a>
+          <a href="#introduced" class="text-gray-800 hover:text-green-600" onclick="toggleCollapse('introducedList')">Інтродуковані в</a>
+          <a href="#biogeographic" class="text-gray-800 hover:text-green-600" onclick="toggleCollapse('biogeographicList')">Біогеографічні зони</a>
+          <a href="#biomes" class="text-gray-800 hover:text-green-600" onclick="toggleCollapse('biomesList')">WWF Біоми</a>
+        </nav>
+      </aside>
+      <div class="md:col-span-3">
+        <h2 class="text-3xl text-green-700 font-semibold mb-4">Ареал</h2>
         
         <article class="mt-4">
           <section id="continents">
             <h3>
-              <button class="btn btn-success w-100 text-start" type="button" data-bs-toggle="collapse" data-bs-target="#continentsList">
+              <button class="bg-green-600 text-white w-full text-left py-2 px-4 rounded-lg hover:bg-green-700 transition-colors" onclick="toggleCollapse('continentsList')">
                 Континенти
               </button>
             </h3>
-            <div class="collapse" id="continentsList">
-              <ul class="list-group mb-3">
-                <li class="list-group-item">Північна Америка</li>
-                <li class="list-group-item">Євразія</li>
+            <div id="continentsList" class="hidden mt-2">
+              <ul class="space-y-2">
+                <li class="bg-white p-4 rounded shadow">Північна Америка</li>
+                <li class="bg-white p-4 rounded shadow">Євразія</li>
               </ul>
             </div>
           </section>
 
-          <section id="subcontinents">
+          <section id="subcontinents" class="mt-4">
             <h3>
-              <button class="btn btn-success w-100 text-start" type="button" data-bs-toggle="collapse" data-bs-target="#subcontinentsList">
+              <button class="bg-green-600 text-white w-full text-left py-2 px-4 rounded-lg hover:bg-green-700 transition-colors" onclick="toggleCollapse('subcontinentsList')">
                 Субконтиненти
               </button>
             </h3>
-            <div class="collapse" id="subcontinentsList">
-              <ul class="list-group mb-3">
-                <li class="list-group-item">Північна Америка</li>
-                <li class="list-group-item">Східна Європа</li>
+            <div id="subcontinentsList" class="hidden mt-2">
+              <ul class="space-y-2">
+                <li class="bg-white p-4 rounded shadow">Північна Америка</li>
+                <li class="bg-white p-4 rounded shadow">Східна Європа</li>
               </ul>
             </div>
           </section>
 
-          <section id="countries">
+          <section id="countries" class="mt-4">
             <h3>
-              <button class="btn btn-success w-100 text-start" type="button" data-bs-toggle="collapse" data-bs-target="#countriesList">
+              <button class="bg-green-600 text-white w-full text-left py-2 px-4 rounded-lg hover:bg-green-700 transition-colors" onclick="toggleCollapse('countriesList')">
                 Країни
               </button>
             </h3>
-            <div class="collapse" id="countriesList">
-              <ul class="list-group mb-3">
-                <li class="list-group-item">США</li>
-                <li class="list-group-item">Канада</li>
-                <li class="list-group-item">Мексика</li>
-                <li class="list-group-item">Польща</li>
-                <li class="list-group-item">Білорусь</li>
-                <li class="list-group-item">Україна</li>
-                <li class="list-group-item">Румунія</li>
-                <li class="list-group-item">Словаччина</li>
-                <li class="list-group-item">Литва</li>
-                <li class="list-group-item">Латвія</li>
-                <li class="list-group-item">Естонія</li>
-                <li class="list-group-item">Чехія</li>
-                <li class="list-group-item">Франція</li>
-                <li class="list-group-item">Нідерланди</li>
-
+            <div id="countriesList" class="hidden mt-2">
+              <ul class="space-y-2">
+                <li class="bg-white p-4 rounded shadow">США</li>
+                <li class="bg-white p-4 rounded shadow">Канада</li>
+                <li class="bg-white p-4 rounded shadow">Мексика</li>
+                <li class="bg-white p-4 rounded shadow">Польща</li>
+                <li class="bg-white p-4 rounded shadow">Білорусь</li>
+                <li class="bg-white p-4 rounded shadow">Україна</li>
+                <li class="bg-white p-4 rounded shadow">Румунія</li>
+                <li class="bg-white p-4 rounded shadow">Словаччина</li>
+                <li class="bg-white p-4 rounded shadow">Литва</li>
+                <li class="bg-white p-4 rounded shadow">Латвія</li>
+                <li class="bg-white p-4 rounded shadow">Естонія</li>
+                <li class="bg-white p-4 rounded shadow">Чехія</li>
+                <li class="bg-white p-4 rounded shadow">Франція</li>
+                <li class="bg-white p-4 rounded shadow">Нідерланди</li>
               </ul>
             </div>
           </section>
 
-          <section id="introduced">
+          <section id="introduced" class="mt-4">
             <h3>
-              <button class="btn btn-success w-100 text-start" type="button" data-bs-toggle="collapse" data-bs-target="#introducedList">
+              <button class="bg-green-600 text-white w-full text-left py-2 px-4 rounded-lg hover:bg-green-700 transition-colors" onclick="toggleCollapse('introducedList')">
                 Інтродуковані в
               </button>
             </h3>
-            <div class="collapse" id="introducedList">
-              <ul class="list-group mb-3">
-                <li class="list-group-item">Мексика</li>
-                <li class="list-group-item">Німеччина</li>
-                <li class="list-group-item">Франція</li>
-                <li class="list-group-item">Іспанія</li>
-                <li class="list-group-item">Нідерланди</li>
-                <li class="list-group-item">Болгарія</li>
-                <li class="list-group-item">Швейцарія</li>
+            <div id="introducedList" class="hidden mt-2">
+              <ul class="space-y-2">
+                <li class="bg-white p-4 rounded shadow">Мексика</li>
+                <li class="bg-white p-4 rounded shadow">Німеччина</li>
+                <li class="bg-white p-4 rounded shadow">Франція</li>
+                <li class="bg-white p-4 rounded shadow">Іспанія</li>
+                <li class="bg-white p-4 rounded shadow">Нідерланди</li>
+                <li class="bg-white p-4 rounded shadow">Болгарія</li>
+                <li class="bg-white p-4 rounded shadow">Швейцарія</li>
               </ul>
             </div>
           </section>
 
-          <section id="biogeographic">
+          <section id="biogeographic" class="mt-4">
             <h3>
-              <button class="btn btn-success w-100 text-start" type="button" data-bs-toggle="collapse" data-bs-target="#biogeographicList">
+              <button class="bg-green-600 text-white w-full text-left py-2 px-4 rounded-lg hover:bg-green-700 transition-colors" onclick="toggleCollapse('biogeographicList')">
                 Біогеографічні зони
               </button>
             </h3>
-            <div class="collapse" id="biogeographicList">
-              <ul class="list-group mb-3">
-                <li class="list-group-item">Неарктика</li>
-                <li class="list-group-item">Палеарктика</li>
+            <div id="biogeographicList" class="hidden mt-2">
+              <ul class="space-y-2">
+                <li class="bg-white p-4 rounded shadow">Неарктика</li>
+                <li class="bg-white p-4 rounded shadow">Палеарктика</li>
               </ul>
             </div>
           </section>
 
-          <section id="biomes">
+          <section id="biomes" class="mt-4">
             <h3>
-              <button class="btn btn-success w-100 text-start" type="button" data-bs-toggle="collapse" data-bs-target="#biomesList">
+              <button class="bg-green-600 text-white w-full text-left py-2 px-4 rounded-lg hover:bg-green-700 transition-colors" onclick="toggleCollapse('biomesList')">
                 WWF Біоми
               </button>
             </h3>
-            <div class="collapse" id="biomesList">
-              <ul class="list-group">
-                <li class="list-group-item">Помірні луки</li>
-                <li class="list-group-item">Помірні широколистяні та мішані ліси</li>
-                <li class="list-group-item">Савани і чагарники</li>
+            <div id="biomesList" class="hidden mt-2">
+              <ul class="space-y-2">
+                <li class="bg-white p-4 rounded shadow">Помірні луки</li>
+                <li class="bg-white p-4 rounded shadow">Помірні широколистяні та мішані ліси</li>
+                <li class="bg-white p-4 rounded shadow">Савани і чагарники</li>
               </ul>
             </div>
           </section>
@@ -145,9 +147,20 @@
     </div>
   </main>
 
-  <footer class="text-center bg-dark text-white py-2">
-    <p>&copy; 2025 Сайт про бізонів</p>
+  <footer class="text-center bg-gray-800 text-white py-4">
+    <p>© 2025 Сайт про бізонів</p>
   </footer>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    function toggleCollapse(id) {
+      const element = document.getElementById(id);
+      element.classList.toggle('hidden');
+      // Прокручування до секції після відкриття
+      const section = element.closest('section');
+      setTimeout(() => {
+        section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 100);
+    }
+  </script>
 </body>
 </html>

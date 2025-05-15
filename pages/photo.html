@@ -6,75 +6,44 @@
   <meta name="description" content="Фотографії бізонів">
   <title>Фотографії бізонів</title>
   <link href="../css/style.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="custom-green-theme">
-  <header class="text-center bg-success text-white py-3">
-    <h1>Фотографії бізонів</h1>
-    <nav class="nav justify-content-center">
-      <a href="../index.html" class="nav-link text-white">Головна</a>
-      <a href="morphology.html" class="nav-link text-white">Зовнішній вигляд</a>
-      <a href="nutrition.html" class="nav-link text-white">Харчування</a>
-      <a href="population.html" class="nav-link text-white">Ареал</a>
+<body class="bg-green-100">
+  <header class="text-center bg-green-600 text-white py-6">
+    <h1 class="text-4xl font-bold">Фотографії бізонів</h1>
+    <nav class="flex justify-center space-x-4 mt-4">
+      <a href="../index.html" class="text-white hover:text-green-200">Головна</a>
+      <a href="morphology.html" class="text-white hover:text-green-200">Зовнішній вигляд</a>
+      <a href="nutrition.html" class="text-white hover:text-green-200">Харчування</a>
+      <a href="population.html" class="text-white hover:text-green-200">Ареал</a>
     </nav>
   </header>
 
-  <main class="container py-4">
-    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-      <div class="carousel-indicators">
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5" aria-label="Slide 6"></button>
-      </div>
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <a href="https://s3.animalia.bio/animals/photos/full/original/k5680-1.webp" target="_blank">
-            <img src="https://s3.animalia.bio/animals/photos/full/original/k5680-1.webp" class="d-block w-100" alt="Фото бізона">
-          </a>
-        </div>
-        <div class="carousel-item">
-          <a href="https://s3.animalia.bio/animals/photos/full/original/cant-beat-a-good-ol-dirt-bath.webp" target="_blank">
-            <img src="https://s3.animalia.bio/animals/photos/full/original/cant-beat-a-good-ol-dirt-bath.webp" class="d-block w-100" alt="Фото бізона">
-          </a>
-        </div>
-        <div class="carousel-item">
-          <a href="https://s3.animalia.bio/animals/photos/full/original/american-bison-bison-bison.webp" target="_blank">
-            <img src="https://s3.animalia.bio/animals/photos/full/original/american-bison-bison-bison.webp" class=d-block w-100" alt="Фото бізона">
-          </a>
-        </div>
-        <div class="carousel-item">
-          <a href="https://s3.animalia.bio/animals/photos/full/original/bison-10-4-14.webp" target="_blank">
-            <img src="https://s3.animalia.bio/animals/photos/full/original/bison-10-4-14.webp" class="d-block w-100" alt="Фото бізона">
-          </a>
-        </div>
-        <div class="carousel-item">
-          <a href="https://s3.animalia.bio/animals/photos/full/original/three-bison-a-bird-in-fog.webp" target="_blank">
-            <img src="https://s3.animalia.bio/animals/photos/full/original/three-bison-a-bird-in-fog.webp" class="d-block w-100" alt="Фото бізона">
-          </a>
-        </div>
-        <div class="carousel-item">
-          <a href="https://s3.animalia.bio/animals/photos/full/original/1620px-bison-on-the-move-in-lower-geyser-basin-48080279418jpg.webp" target="_blank">
-            <img src="https://s3.animalia.bio/animals/photos/full/original/1620px-bison-on-the-move-in-lower-geyser-basin-48080279418jpg.webp" class="d-block w-100" alt="Фото бізона">
-          </a>
-        </div>
-      </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
+  <main class="max-w-4xl mx-auto py-8 px-4">
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+      <a href="https://s3.animalia.bio/animals/photos/full/original/k5680-1.webp" target="_blank">
+        <img src="https://s3.animalia.bio/animals/photos/full/original/k5680-1.webp" class="w-full h-64 object-cover rounded-lg shadow hover:opacity-80 transition-opacity" alt="Фото бізона">
+      </a>
+      <a href="https://s3.animalia.bio/animals/photos/full/original/cant-beat-a-good-ol-dirt-bath.webp" target="_blank">
+        <img src="https://s3.animalia.bio/animals/photos/full/original/cant-beat-a-good-ol-dirt-bath.webp" class="w-full h-64 object-cover rounded-lg shadow hover:opacity-80 transition-opacity" alt="Фото бізона">
+      </a>
+      <a href="https://s3.animalia.bio/animals/photos/full/original/american-bison-bison-bison.webp" target="_blank">
+        <img src="https://s3.animalia.bio/animals/photos/full/original/american-bison-bison-bison.webp" class="w-full h-64 object-cover rounded-lg shadow hover:opacity-80 transition-opacity" alt="Фото бізона">
+      </a>
+      <a href="https://s3.animalia.bio/animals/photos/full/original/bison-10-4-14.webp" target="_blank">
+        <img src="https://s3.animalia.bio/animals/photos/full/original/bison-10-4-14.webp" class="w-full h-64 object-cover rounded-lg shadow hover:opacity-80 transition-opacity" alt="Фото бізона">
+      </a>
+      <a href="https://s3.animalia.bio/animals/photos/full/original/three-bison-a-bird-in-fog.webp" target="_blank">
+        <img src="https://s3.animalia.bio/animals/photos/full/original/three-bison-a-bird-in-fog.webp" class="w-full h-64 object-cover rounded-lg shadow hover:opacity-80 transition-opacity" alt="Фото бізона">
+      </a>
+      <a href="https://s3.animalia.bio/animals/photos/full/original/1620px-bison-on-the-move-in-lower-geyser-basin-48080279418jpg.webp" target="_blank">
+        <img src="https://s3.animalia.bio/animals/photos/full/original/1620px-bison-on-the-move-in-lower-geyser-basin-48080279418jpg.webp" class="w-full h-64 object-cover rounded-lg shadow hover:opacity-80 transition-opacity" alt="Фото бізона">
+      </a>
     </div>
   </main>
 
-  <footer class="text-center bg-dark text-white py-2">
-    <p>&copy; 2025 Сайт про бізонів</p>
+  <footer class="text-center bg-gray-800 text-white py-4">
+    <p>© 2025 Сайт про бізонів</p>
   </footer>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
